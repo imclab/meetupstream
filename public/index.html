@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>meetup stream</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/1.2.4/es5-shim.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <h1><a href="/">meetup stream</a></h1>
+    <div id="content">
+      <div id="filter">
+        <h3><a>filter</a></h3>
+        <form id="form" class="form hidden" action="">
+          <div>
+            <label for="field-search">search</label>
+            <input id="field-search" class="regexp" />
+            <span>&nbsp;</span>
+          </div>
+          <div>
+            <label for="field-user">user</label>
+            <input id="field-user" class="regexp" />
+            <span>&nbsp;</span>
+          </div>
+          <div>
+            <label for="field-latFrom">latitude</label>
+            <input id="field-latFrom" size="6" />
+            <input id="field-latTo" size="6" />
+          </div>
+          <div>
+            <label for="field-lonFrom">longitude</label>
+            <input id="field-lonFrom" size="6" />
+            <input id="field-lonTo" size="6" />
+          </div>
+          <div>
+            <label for="field-city">city</label>
+            <input id="field-city" class="regexp" />
+            <span>&nbsp;</span>
+          </div>
+          <div>
+            <label for="field-state">state</label>
+            <input id="field-state" class="regexp" />
+            <span>&nbsp;</span>
+          </div>
+          <div>
+            <label for="field-country">country</label>
+            <input id="field-country" class="regexp" />
+            <span>&nbsp;</span>
+          </div>
+          <div id="update">
+            <input type="submit" value="update" />
+          </div>
+        </form>
+      </div>
+      <div id="photos">
+      </div>
+    </div>
+    <script src="/main.js"></script>
+  </body>
+</html>

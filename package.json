@@ -1,0 +1,41 @@
+{
+  "name": "meetupstream",
+  "subdomain": "mustream",
+  "description": "Stream of photos from meetup",
+  "private": true,
+  "keywords": [
+    "meetup",
+    "stream",
+    "photo",
+    "pic",
+    "image"
+  ],
+  "version": "0.0.1-6",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fent/MOD.git"
+  },
+  "author": "Roly Fentanes (https://github.com/fent)",
+  "main": "./lib/index.js",
+  "scripts": {
+    "start": "node lib/index.js"
+  },
+  "dependencies": {
+    "connect": "~2.7.0",
+    "jstream": "~0.2.0",
+    "reconnect": "~0.3.1",
+    "request": "~2.9.203",
+    "socket.io": "~0.9.11",
+    "through": "~1.1.1"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": "0.8.x"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/fent/MOD/raw/master/LICENSE"
+    }
+  ]
+}

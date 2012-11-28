@@ -1,0 +1,111 @@
+* {
+  position: relative;
+}
+
+body {
+  text-align: center;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+h1 a {
+  text-align: center;
+  color: #444;
+}
+
+img {
+  box-shadow: 0px 8px 6px -6px #333;
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#photos a:hover {
+  text-shadow: 1px 1px 3px #333;
+}
+
+label {
+  float: left;
+  width: 30%;
+}
+
+#filter {
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+#filter h3 {
+  color: navy;
+  margin: 0;
+  border-radius: 5px;
+}
+
+#filter h3:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+#filter .form {
+  width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 120%;
+}
+
+#filter input {
+  font-size: 130%;
+  font-weight: bold;
+}
+
+#update {
+  text-align: center;
+}
+
+button {
+  text-align: center;
+  font-size: 120%;
+}
+
+#content {
+  width: 800px;
+  margin: 0px auto;
+  padding: 15px;
+}
+
+#photos {
+}
+
+.photo {
+  padding-bottom: 1em;
+}
+
+.member {
+}
+
+.group {
+}
+
+.city {
+}
+
+.state:before {
+  content: ', ';
+}
+
+.country:before {
+  content: ', ';
+}
+
+.country {
+  text-transform: uppercase;
+}
+
+.hidden {
+  display: none;
+}
+
+#form span {
+  font-weight: bold;
+}
