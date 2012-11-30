@@ -25,20 +25,29 @@ var socket = io.connect();
 socket.on('photo', function onPhoto(photo) {
   console.log('got photo', photo);
 
+  // add photo to page
+  var $photo = $('<div>')
+    .addClass('photo')
+    .append($a, $member, $group, $event)
+    .css('display', 'none')
+    .prependTo($photos);
+
   // create html elements to represent new photo
   var $img = $('<img>')
     .attr('src', photo.photo_link);
   var $a = $('<a>')
     .attr('href', photo.highres_link)
     .attr('target', '_blank')
-    .append($img);
+    .append($img)
+    .appendTo($photo);
   var $memberLink = $('<a>')
     .attr('href',
       'http://www.meetup.com/members/' + photo.member.member_id + '/')
     .text(photo.member.name);
   var $member = $('<div>')
     .addClass('member')
-    .append($memberLink);
+    .append($memberLink)
+    .appendTo($photo);
   var $groupLink = $('<a>')
     .attr('href', 'http://www.meetup.com/' + photo.group.urlname + '/')
     .text(photo.group.name);
@@ -56,21 +65,18 @@ socket.on('photo', function onPhoto(photo) {
     .append($groupCity, $groupState, $groupCountry);
   var $group = $('<div>')
     .addClass('group')
-    .append($groupLink, $location);
-  var $eventLink = $('<a>')
-    .attr('href', 'http://www.meetup.com/' + photo.group.urlname +
-      '/events/' + photo.event.id + '/')
-    .text(photo.event.name);
-  var $event = $('<div>')
-    .addClass('event')
-    .append($eventLink);
-
-  // add photo to page
-  var $photo = $('<div>')
-    .addClass('photo')
-    .append($a, $member, $group, $event)
-    .css('display', 'none')
-    .prependTo($photos);
+    .append($groupLink, $location)
+    .appendTo($photo);
+  if (photo.event) {
+    var $eventLink = $('<a>')
+      .attr('href', 'http://www.meetup.com/' + photo.group.urlname +
+        '/events/' + photo.event.id + '/')
+      .text(photo.event.name);
+    var $event = $('<div>')
+      .addClass('event')
+      .append($eventLink)
+      .appendTo($photo);
+  }
 
   $img.load(function onLoad() {
     $photo.slideDown('fast');
