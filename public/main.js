@@ -57,11 +57,18 @@ socket.on('photo', function onPhoto(photo) {
   var $group = $('<div>')
     .addClass('group')
     .append($groupLink, $location);
+  var $eventLink = $('<a>')
+    .attr('href', 'http://www.meetup.com/' + photo.group.urlname +
+      '/events/' + photo.event.id + '/')
+    .text(photo.event.name);
+  var $event = $('<div>')
+    .addClass('event')
+    .append($eventLink);
 
   // add photo to page
   var $photo = $('<div>')
     .addClass('photo')
-    .append($a, $member, $group)
+    .append($a, $member, $group, $event)
     .css('display', 'none')
     .prependTo($photos);
 
