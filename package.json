@@ -10,10 +10,10 @@
     "pic",
     "image"
   ],
-  "version": "0.0.1-13",
+  "version": "0.0.1-14",
   "repository": {
     "type": "git",
-    "url": "git://github.com/fent/MOD.git"
+    "url": "git://github.com/fent/meetupstream.git"
   },
   "author": "Roly Fentanes (https://github.com/fent)",
   "main": "./lib/index.js",
@@ -35,7 +35,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/fent/MOD/raw/master/LICENSE"
+      "url": "http://github.com/fent/meetupstream/raw/master/LICENSE"
     }
   ]
 }
