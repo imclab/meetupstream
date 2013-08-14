@@ -10,7 +10,7 @@
     "pic",
     "image"
   ],
-  "version": "0.0.1-17",
+  "version": "0.0.1-18",
   "repository": {
     "type": "git",
     "url": "git://github.com/fent/meetupstream.git"
@@ -25,7 +25,7 @@
     "jstream": "~0.2.0",
     "readable-stream": "~1.0.2",
     "reconnect": "~1.5.1",
-    "request": "~2.25.0",
+    "request": "~2.26.0",
     "socket.io": "~0.9.11"
   },
   "devDependencies": {},
