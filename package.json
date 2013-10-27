@@ -21,7 +21,7 @@
     "start": "node lib/index.js"
   },
   "dependencies": {
-    "connect": "~2.9.0",
+    "connect": "~2.10.1",
     "jstream": "~0.2.0",
     "readable-stream": "~1.1.9",
     "reconnect": "~1.5.1",
