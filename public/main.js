@@ -1,4 +1,4 @@
-/*global io, $, window, document */
+/*global Primus */
 // state
 var $photos = $('#photos');
 var photos = [];
@@ -20,9 +20,9 @@ $(window)
     focused = true;
   });
 
-var socket = io.connect();
+var primus = new Primus();
 
-socket.on('photo', function onPhoto(photo) {
+primus.on('photo', function onPhoto(photo) {
   console.log('got photo', photo);
 
   // add photo to page
@@ -165,9 +165,9 @@ function updateQuery() {
 
 // On connect, subscribe to certain photos
 // based on the query given from the URL.
-socket.on('connect', function() {
+primus.on('connect', function() {
   updateQuery();
-  socket.emit('subscribe', query);
+  primus.send('subscribe', query);
 });
 
 
